@@ -13,13 +13,16 @@
     window.webViewObj.backHome();<br/>
     }
 </h6>
+<h6 id="eee"></h6>
 <script type = "text/javascript">
 
     //在android代码中调用此方法
     function showInfoFromAndroid(msg){
-        alert("来自客户端的信息："+msg);
+        var table = document.getElementById("eee");
+        table.innerHTML=msg;
+//        alert("来自客户端的信息："+msg);
     }
-
+//    showInfoFromAndroid(22222222)
 </script>
 <script>
     function getAndroidMsg(){
