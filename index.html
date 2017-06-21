@@ -13,6 +13,14 @@
     window.webViewObj.backHome();<br/>
     }
 </h6>
+<script type = "text/javascript">
+
+    //在android代码中调用此方法
+    function showInfoFromAndroid(msg){
+        alert("来自客户端的信息："+msg);
+    }
+
+</script>
 <script>
     function getAndroidMsg(){
         //window.接口名.方法名（参数）;
@@ -22,9 +30,6 @@
         }catch (e){
             alert('触发无效，错误内容：'+e)
         }
-    }
-    function showInfoFromAndroid(msg){
-        alert("来自客户端的信息："+msg);
     }
 </script>
 </body>
