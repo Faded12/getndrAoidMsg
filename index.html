@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试与安卓交互</title>
+</head>
+<body>
+<button onclick="getAndroidMsg()">点击触发安卓</button>
+<h6>
+    此按钮函数内容：<br/><br/>
+    function getAndroidMsg(){<br/>
+    <span style="background-color: #bec1c8">//  window.接口名.方法名（参数）;</span><br/>
+    window.webViewObj.backHome();<br/>
+    }
+</h6>
+<script>
+    function getndrAoidMsg(){
+        //window.接口名.方法名（参数）;
+        try {
+            window.webViewObj.backHome();
+            alert('已触发backHome()方法')
+        }catch (e){
+            alert('触发无效，错误内容：'+e)
+        }
+    }
+    function showInfoFromAndroid(msg){
+        alert("来自客户端的信息："+ JSON.stringify(msg));
+    }
+</script>
+</body>
+</html>
